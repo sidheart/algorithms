@@ -17,7 +17,7 @@ func TextJustifier() Justifier {
 		parent = make([]int, n+1)
 		memo[n] = 0
 		for i := n - 1; i >= 0; i-- {
-			min := 0x8FFFFFFF // Maximum 32 bit signed integer
+			min := 0x7FFFFFFF // Maximum 32 bit signed integer
 			for j := i + 1; j <= n; j++ {
 				curMin := badnessFunc(text[i:j]) + memo[j]
 				if curMin < min {
