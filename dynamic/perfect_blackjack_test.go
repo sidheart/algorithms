@@ -43,4 +43,37 @@ func TestPerfectBlackjack(t *testing.T) {
 		{Face: Ace, Suite: Clubs},
 	}}
 	assert.Equal(t, 2, PerfectBlackjack(deck))
+	// Player needs to bust on a winning hand in order to achieve the best possible outcome
+	deck = Deck{Cards: []Card{
+		{Face: Seven, Suite: Hearts},
+		{Face: King, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Ace, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Seven, Suite: Hearts},
+		{Face: King, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Ace, Suite: Clubs},
+		{Face: Seven, Suite: Hearts},
+		{Face: King, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Ace, Suite: Clubs},
+		{Face: Seven, Suite: Hearts},
+		{Face: King, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Ace, Suite: Clubs},
+		{Face: Seven, Suite: Hearts},
+		{Face: King, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Ace, Suite: Clubs},
+		{Face: Seven, Suite: Hearts},
+		{Face: King, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Ace, Suite: Clubs},
+		{Face: Seven, Suite: Hearts},
+		{Face: King, Suite: Clubs},
+		{Face: Ace, Suite: Hearts},
+		{Face: Ace, Suite: Clubs},
+	}}
+	assert.Equal(t, 5, PerfectBlackjack(deck))
 }
