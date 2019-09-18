@@ -13,12 +13,12 @@ type multiplicationResult struct {
 	split int
 }
 
-// A costFunction returns the cost of multiplying Matrices A[i~k] and A[k~j]
+// A matrixMultCost returns the cost of multiplying Matrices A[i~k] and A[k~j]
 // A[i~j] denotes the Matrix obtained by multiplying all the Matrices from A_i to A_j-1
-type costFunction func (terms *[]util.Matrix, i int, j int, k int) int
+type matrixMultCost func (terms *[]util.Matrix, i int, j int, k int) int
 
 
-// multiplicationCost is a costFunction that computes the cost of multiplying A[i~k] * A[k~j]
+// multiplicationCost is a matrixMultCost that computes the cost of multiplying A[i~k] * A[k~j]
 // Note that the cost of computing the individual terms A[i~k] and A[k~j] is not included
 func mutliplicationCost(terms *[]util.Matrix, i int, j int, k int) int  {
 	derefTerms := *terms
@@ -53,7 +53,7 @@ func printOptimalMultiplication(lo int, hi int, solution *map[util.Cell]multipli
 }
 
 // Computes the optimal way to compute A[i~j] and stores the result in memo[Cell{i,j}]
-func parenthesize(terms *[]util.Matrix, i int, j int, costFunc costFunction, memo map[util.Cell]multiplicationResult) multiplicationResult {
+func parenthesize(terms *[]util.Matrix, i int, j int, costFunc matrixMultCost, memo map[util.Cell]multiplicationResult) multiplicationResult {
 	min := math.MaxInt64
 	desiredCell := util.Cell{i,j}
 	length := j - i
