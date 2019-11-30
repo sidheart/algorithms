@@ -1,4 +1,4 @@
-package citc
+package ctic
 
 import (
 	"strconv"

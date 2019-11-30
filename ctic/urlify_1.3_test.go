@@ -1,4 +1,4 @@
-package citc
+package ctic
 
 import (
 	"github.com/stretchr/testify/assert"
