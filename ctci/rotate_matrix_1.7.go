@@ -1,4 +1,4 @@
-package ctic
+package ctci
 
 type Pixel struct {
 	r,g,b,a byte

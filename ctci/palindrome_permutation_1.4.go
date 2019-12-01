@@ -1,4 +1,4 @@
-package ctic
+package ctci
 
 import "unicode"
 
