@@ -1,4 +1,4 @@
-package ctci
+package chapter_1
 
 func CheckPermutation(s, t string) bool {
 	m := make(map[rune]int)

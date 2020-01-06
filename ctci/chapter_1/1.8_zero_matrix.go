@@ -1,4 +1,4 @@
-package ctci
+package chapter_1
 
 // coord represents a coordinate in a given matrix
 type coord struct {

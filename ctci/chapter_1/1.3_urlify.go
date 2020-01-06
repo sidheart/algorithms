@@ -1,5 +1,5 @@
 // package ctci contains solutions for various problems presented in Cracking the Coding Interview
-package ctci
+package chapter_1
 
 // findSpace returns the index of the first space character in a string, or -1 if there is none
 func findSpace(s string) int {

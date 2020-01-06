@@ -1,4 +1,4 @@
-package ctci
+package chapter_1
 
 type Pixel struct {
 	r,g,b,a byte

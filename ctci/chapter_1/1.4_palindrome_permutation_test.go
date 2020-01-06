@@ -1,4 +1,4 @@
-package ctci
+package chapter_1
 
 import (
 	"github.com/stretchr/testify/assert"
