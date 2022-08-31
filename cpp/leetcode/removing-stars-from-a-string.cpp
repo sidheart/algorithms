@@ -15,7 +15,6 @@ Note:
     It can be shown that the resulting string will always be unique. */
 class Solution {
 public:
-    // I wish there was a way to remove the call to substr at the end
     string removeStars(string s) {
         int star_count = 0;
         int insert_pos = s.size()-1;
@@ -29,7 +28,7 @@ public:
                 star_count--;
             }
         }
-        return s.substr(insert_pos+1);
+        s.erase(0, insert_pos+1);
+        return s;
     }
-};
-
+}
