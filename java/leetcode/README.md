@@ -3,6 +3,6 @@ Each file here corresponds to the leetcode problem at:
 
 `https://leetcode.com/problems/$(filename)`
 
-where $(filename) is the name of the impl file without the .cpp suffix.
+where $(filename) is the name of the impl file without the .java suffix.
 
 You can copy paste the code in each file into its corresponding leetcode problem sandbox and it should pass
